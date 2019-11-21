@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Griff</title>
+		<link rel ="stylesheet" href="styles.css"/> 
+		<meta charset="utf-8" />
+	</head>
+	<body>
+        <div id="navbar">
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#"class="active-page">Contact</a>
+        </div>
+
+		<div class="container">  
+            <form id="contact" action="" method="post">
+                <h1>Contact Form</h1> <br>
+                <fieldset>
+                    <legend>&nbsp;Purpose of Contact</legend>
+                        <div class="wrap-contact3-form-radio">
+                            <div class="contact3-form-radio m-r-42">
+                                <input class="input-radio3" id="radio1" type="radio" name="choice" value="general inquiries" checked="checked">
+                                <label class="label-radio3" for="radio1">
+                                    General inquiries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                                </label>
+                            </div>
+                            <div class="contact3-form-radio">
+                                <input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote"> 
+                                <label class="label-radio3" for="radio2">
+                                    Get a Quote
+                                </label>
+                            </div>
+                        </div>
+                        <div id='dropDown'>
+                            <select class="selection-2" name="service">
+                                <option>&nbsp;Choose Services</option>
+                                <option>Online Store</option>
+                                <option>eCommerce Bussiness</option>
+                                <option>UI/UX Design</option>
+                                <option>Online Services</option>
+                            </select>
+                        </div>
+                </fieldset>        
+                <fieldset>
+                    <legend>&nbsp;Personal Information</legend>
+                        <input placeholder="First name" type="text" tabindex="1" required autofocus>
+                        <input placeholder="Last name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <legend>&nbsp;Contact Information</legend>
+                        <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                        <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <legend>&nbsp;Message</legend>
+                        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                </fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                <p class="copyright">Copyright <a href="" target="_blank" title="contact">Griffworks 2019</a></p>
+            </form>
+        </div>
+    </body>
+    <script>
+        // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        } 
+    </script>
+</html>
